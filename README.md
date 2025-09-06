@@ -7,9 +7,10 @@ Play TicTacToe against a human or AI! Choose a **Random bot** for fun or an **un
 ## Features
 
 - **Play Modes**:
-  - Human vs Human
-  - Human vs Random Bot
-  - Human vs MiniMax Bot (unbeatable)
+
+Any combination of Human and Bots (Random or MiniMax)
+
+Examples: Human vs Human, Human vs Random Bot, MiniMax vs Random Bot, etc.
 - **Interfaces**:
   - Terminal
   - Tkinter GUI
