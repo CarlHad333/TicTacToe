@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #ae4d39dc, #f1a75c);
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+
+html {
+    font-size: 16px;
+}
+
+h1 {
+    font-size: clamp(1rem, 3vw + 1rem, 4rem);
+    font-family: "Source Code Pro", monospace;
+    position: relative;
+    width: fit-content;
+    margin: auto;
+}
+
+
+h1::before,
+h1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+h1::before{
+    background: linear-gradient(135deg, #ae4d39, #f1a75c);
+    animation: typewriter 3s steps(8) 1s forwards;
+}
+
+h1::after {
+    width: 0.125em;
+    background: black;
+    animation: typewriter 3s steps(8) 1s forwards,
+        blink 750ms steps(2, start) infinite;
+}
+
+form {
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 3s ease 1s forwards;
+}
+
+@keyframes typewriter {
+    to {left: 100%}
+}
+
+@keyframes blink {
+    to {
+        background: transparent;
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

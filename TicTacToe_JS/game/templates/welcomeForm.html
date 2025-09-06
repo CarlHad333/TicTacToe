@@ -1,0 +1,69 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Tic Tac Toe</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="{% static '/css/Wstyle.css' %}" />
+
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Welcome!</h1>
+      <img src="{% static '/images/welcome.png' %}" />
+    </div>
+
+    <div class="wrapper">
+      <form method="POST">
+        {% csrf_token %} {{ form.as_p }}
+
+        <label for="username1">Choose Player X:</label>
+        <select name="username1">
+          <option value="H">Human</option>
+          <option value="M">Minimax</option>
+          <option value="R">Random</option>
+        </select>
+
+        <br />
+        <br />
+
+        <label for="username2">Choose Player O:</label>
+        <select name="username2">
+          <option value="H">Human</option>
+          <option value="M">Minimax</option>
+          <option value="R">Random</option>
+        </select>
+
+        <br /><br />
+
+        <input type="Submit" name="submit" value="Submit" id="subBtn" />
+      </form>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+
+
+  </body>
+</html>
